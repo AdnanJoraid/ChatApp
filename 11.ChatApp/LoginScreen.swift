@@ -27,7 +27,7 @@ struct LoginScreen: View {
                 .foregroundColor(.blue)
             Spacer()
             
-            TextField("Enter username", text:$userNameInput)
+            TextField("Enter username", text:$userNameInput) //binding State property wrapper to the text
                 .padding()
                 .frame(height: 50)
                 .background(lightGrayColor)
@@ -35,7 +35,7 @@ struct LoginScreen: View {
                 .padding()
             Spacer()
             
-            Button(action: {print(("tapped"))}){
+            Button(action: {self.signIn()}){
                 Text("log in")
                     .foregroundColor(.black)
                 

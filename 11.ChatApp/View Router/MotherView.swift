@@ -9,8 +9,20 @@
 import SwiftUI
 
 struct MotherView: View {
+    
+    @EnvironmentObject var viewRouter : ViewRouter
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            if (viewRouter.currentPage == "loginScreen"){
+                LoginScreen()
+                
+            } else if (viewRouter.currentPage == "chatScreen") {
+                ChatScreen()
+            }
+            
+        }
     }
 }
 
