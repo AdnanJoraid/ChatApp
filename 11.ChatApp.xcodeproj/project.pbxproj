@@ -18,7 +18,7 @@
 		9088708424CC690800E50756 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9088708324CC690800E50756 /* LoginScreen.swift */; };
 		9088708624CC691800E50756 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9088708524CC691800E50756 /* ChatScreen.swift */; };
 		9088708924CC693E00E50756 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9088708824CC693E00E50756 /* MotherView.swift */; };
-		9088708B24CC694E00E50756 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9088708A24CC694E00E50756 /* ViewRouter.swift */; };
+		90C8E20224D335850094FFF4 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C8E20124D335850094FFF4 /* ViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		9088708324CC690800E50756 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		9088708524CC691800E50756 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		9088708824CC693E00E50756 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
-		9088708A24CC694E00E50756 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		90C8E20124D335850094FFF4 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +109,9 @@
 			children = (
 				9088705024CBBB2800E50756 /* AppDelegate.swift */,
 				9088705224CBBB2800E50756 /* SceneDelegate.swift */,
-				9088708324CC690800E50756 /* LoginScreen.swift */,
 				9088708724CC692000E50756 /* View Router */,
 				9088708524CC691800E50756 /* ChatScreen.swift */,
+				9088708324CC690800E50756 /* LoginScreen.swift */,
 				9088705924CBBB2C00E50756 /* Assets.xcassets */,
 				9088705E24CBBB2C00E50756 /* LaunchScreen.storyboard */,
 				9088706124CBBB2C00E50756 /* Info.plist */,
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9088708824CC693E00E50756 /* MotherView.swift */,
-				9088708A24CC694E00E50756 /* ViewRouter.swift */,
+				90C8E20124D335850094FFF4 /* ViewRouter.swift */,
 			);
 			path = "View Router";
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9088705124CBBB2800E50756 /* AppDelegate.swift in Sources */,
-				9088708B24CC694E00E50756 /* ViewRouter.swift in Sources */,
+				90C8E20224D335850094FFF4 /* ViewRouter.swift in Sources */,
 				9088708924CC693E00E50756 /* MotherView.swift in Sources */,
 				9088708624CC691800E50756 /* ChatScreen.swift in Sources */,
 				9088708424CC690800E50756 /* LoginScreen.swift in Sources */,

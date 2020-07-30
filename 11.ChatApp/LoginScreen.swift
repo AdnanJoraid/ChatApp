@@ -13,6 +13,8 @@ let lightGrayColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255
 struct LoginScreen: View {
     @State private var userNameInput : String = ""
     
+    @EnvironmentObject var viewRouter : ViewRouter
+    
     var body: some View {
         VStack {
             Text("Login")
@@ -46,7 +48,20 @@ struct LoginScreen: View {
             
         }
     }
+    
+    func signIn(){
+        guard !userNameInput.isEmpty else {
+            return
+        }
+        let defaults = UserDefaults.standard
+        defaults.set(userNameInput, forKey: "username")
+        
+        viewRouter.currentPage = "chatScreen"
+       
+    }
 }
+
+
 
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
