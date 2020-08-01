@@ -13,12 +13,18 @@ class ChatMessage {
     let messageText : String
     let userName : String
     let isMe : Bool
-    let messageId : UUID
+    let messageId = UUID()
     
-    init(messageText: String, userName: String, isMe : Bool, messageId : UUID){
+    init(messageText: String, userName: String, isMe : Bool){
         self.messageText = messageText
         self.userName = userName
         self.isMe = isMe
-        self.messageId = messageId
+        
     }
 }
+
+let sampleConversation : [ChatMessage] = [
+    ChatMessage(messageText: "Hello, how are you?", userName: "Me", isMe: true),
+    ChatMessage(messageText: "I am fine and you?", userName: "NotMe", isMe: false),
+    ChatMessage(messageText: "I am fine, thanks for asking", userName: "Me", isMe: true)
+]
