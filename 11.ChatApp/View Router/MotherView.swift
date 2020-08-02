@@ -19,7 +19,7 @@ struct MotherView: View {
                 LoginScreen()
                 
             } else if (viewRouter.currentPage == "chatScreen") {
-                ChatScreen()
+                ChatScreen(chatController: ChatController())
             }
             
         }

@@ -12,11 +12,11 @@ struct ChatScreen: View {
     
     @State var newMessageInput : String = ""
     @ObservedObject var keyboardResponder = KeyboardResponder()
-    
+    @ObservedObject var chatController : ChatController
     var body: some View {
         NavigationView{
             VStack {
-                ForEach(sampleConversation, id:\.messageId) {message in
+                ForEach(chatController.messages, id:\.messageId) {message in
                     ChatRow(message: message)
                     
                 }
@@ -52,6 +52,6 @@ struct ChatScreen: View {
 
 struct ChatScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ChatScreen()
+        ChatScreen(chatController: ChatController())
     }
 }

@@ -11,5 +11,7 @@ import SwiftUI
 import Combine
 
 class ChatController : ObservableObject {
+    var messages = [ChatMessage]()
     
+    let objectWillChange = PassthroughSubject<ChatController,Never>()
 }
