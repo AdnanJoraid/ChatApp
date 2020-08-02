@@ -22,7 +22,7 @@ struct ChatRow: View {
                     .foregroundColor(message.isMe ? lightGrayColor : .gray)
                 Text(message.messageText)
             }
-            .frame(maxWidth: 280, alignment: self.message.isMe ? .trailing : .leading)
+            .frame(maxWidth: 280, alignment: self.message.isMe ? .leading : .leading)
             .padding(10)
             .background(message.isMe ? Color.blue : lightGrayColor)
             .cornerRadius(10)
@@ -38,6 +38,6 @@ struct ChatRow: View {
 
 struct ChatRow_Previews: PreviewProvider {
     static var previews: some View {
-        ChatRow(message: sampleConversation[1])
+        ChatRow(message: sampleConversation[2])
     }
 }

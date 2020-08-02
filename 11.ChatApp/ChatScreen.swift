@@ -9,8 +9,36 @@
 import SwiftUI
 
 struct ChatScreen: View {
+    
+    @State var newMessageInput : String = ""
+    
     var body: some View {
-        Text("Hassan WR3")
+        NavigationView{
+            VStack {
+                ForEach(sampleConversation, id:\.messageId) {message in
+                    ChatRow(message: message)
+                    
+                }
+                Spacer()
+                
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(lightGrayColor, lineWidth: 2)
+                        .padding()
+                    
+                    HStack {
+                        TextField("New message...", text: $newMessageInput, onCommit: {print("send message")})
+                        
+                        Image(systemName: "paperplane")
+                            .imageScale(.large)
+                            .padding(30)
+                    }
+                }.frame(height:70)
+            }
+        }
+        
     }
 }
 
