@@ -11,6 +11,7 @@ import SwiftUI
 struct ChatScreen: View {
     
     @State var newMessageInput : String = ""
+    @ObservedObject var keyboardResponder = KeyboardResponder()
     
     var body: some View {
         NavigationView{
@@ -36,10 +37,13 @@ struct ChatScreen: View {
                             .imageScale(.large)
                             .padding(30)
                     }
-                }.frame(height:70)
+                    }
+                .frame(height:70)
+                .offset(y: -keyboardResponder.currentHeight)
+                
             }
-             .navigationBarTitle("ChatApp")
-        
+            .navigationBarTitle("ChatApp")
+            
         }
        
         
