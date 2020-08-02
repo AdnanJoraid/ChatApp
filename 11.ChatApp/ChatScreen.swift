@@ -62,6 +62,9 @@ struct ChatScreen: View {
                 
             }
             .navigationBarTitle("ChatApp")
+        .onAppear(perform: {
+            self.chatController.receiveMessages()
+        })
             
         }
        

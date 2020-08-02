@@ -23,5 +23,24 @@ class ChatController : ObservableObject {
         newChat.setValue(messageToSend)
     }
     
-
+    func receiveMessages() {
+        
+        
+        let query = databaseChats.queryLimited(toLast: 100)
+        
+        _ = query.observe(.childAdded, with: { [weak self] snapshot in
+            
+            if  let data = snapshot.value as? [String: String],
+                let retrievedUsername = data["username"],
+                let retrievedMessageText = data["messageText"],
+                !retrievedMessageText.isEmpty
+            {
+                let retrievedMessage = ChatMessage(messageText: retrievedMessageText, userName: retrievedUsername)
+                self?.messages.append(retrievedMessage)
+                self?.objectWillChange.send(self!)
+            }
+        })
+    }
+    
+    
 }
