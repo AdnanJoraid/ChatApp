@@ -30,6 +30,7 @@ struct ChatScreen: View {
                     
                     HStack {
                         TextField("New message...", text: $newMessageInput, onCommit: {print("send message")})
+                            .padding(25)
                         
                         Image(systemName: "paperplane")
                             .imageScale(.large)
@@ -37,7 +38,10 @@ struct ChatScreen: View {
                     }
                 }.frame(height:70)
             }
+             .navigationBarTitle("ChatApp")
+        
         }
+       
         
     }
 }
