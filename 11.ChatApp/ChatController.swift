@@ -14,4 +14,14 @@ class ChatController : ObservableObject {
     var messages = [ChatMessage]()
     
     let objectWillChange = PassthroughSubject<ChatController,Never>()
+    
+    func sendMessage(messageText: String){
+        let newChat = databaseChats.childByAutoId()
+        
+        let messageToSend = ["username": UserDefaults.standard.string(forKey: "username") ?? "Unknown user", "messageText": messageText]
+        
+        newChat.setValue(messageToSend)
+    }
+    
+
 }

@@ -30,14 +30,33 @@ struct ChatScreen: View {
                         .padding()
                     
                     HStack {
-                        TextField("New message...", text: $newMessageInput, onCommit: {print("send message")})
-                            .padding(25)
+                        TextField("New message...", text: $newMessageInput, onCommit: {
+                            guard !self.newMessageInput.isEmpty else {
+                                print("message is empty")
+                                return
+                            }
+                            
+                            self.chatController.sendMessage(messageText: self.newMessageInput)
+                            self.newMessageInput = ""
+                        })
+                            .padding(30)
                         
-                        Image(systemName: "paperplane")
+                        Button(action: {
+                            guard !self.newMessageInput.isEmpty else {
+                                print("message is empty")
+                                return
+                            }
+                            self.chatController.sendMessage(messageText: self.newMessageInput)
+                            self.newMessageInput = ""
+                        }) {
+                            Image(systemName: "paperplane")
                             .imageScale(.large)
                             .padding(30)
+                        }
+                        
+                        
                     }
-                    }
+                }
                 .frame(height:70)
                 .offset(y: -keyboardResponder.currentHeight)
                 
