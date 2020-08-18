@@ -16,10 +16,15 @@ struct ChatScreen: View {
     var body: some View {
         NavigationView{
             VStack {
+                List{
                 ForEach(chatController.messages, id:\.messageId) {message in
                     ChatRow(message: message)
                     
+                    }
+                    
                 }
+                    
+                //}
                 Spacer()
                 
                 ZStack {
@@ -60,11 +65,11 @@ struct ChatScreen: View {
                 .frame(height:70)
                 .offset(y: -keyboardResponder.currentHeight)
                 
-            }
-            .navigationBarTitle("ChatApp")
-        .onAppear(perform: {
-            self.chatController.receiveMessages()
-        })
+            }.navigationBarTitle("ChatApp")
+            .onAppear(perform: {
+                self.chatController.receiveMessages()
+            })
+           
             
         }
        
