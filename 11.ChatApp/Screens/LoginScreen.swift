@@ -27,7 +27,7 @@ struct LoginScreen: View {
                 .foregroundColor(.blue)
             Spacer()
             
-            TextField("Enter username", text:$userNameInput) //binding State property wrapper to the text
+            TextField("Enter your username", text:$userNameInput) //binding State property wrapper to the text
                 .padding()
                 .frame(height: 50)
                 .background(lightGrayColor)
@@ -45,7 +45,7 @@ struct LoginScreen: View {
                 .cornerRadius(40)
             Spacer()
             
-            
+            //the view will move up two and a half the keyboard current height while typing the username, preventing the keyboard from blocking the view.
         }.offset(y: -keyboardResponder.currentHeight/2.5)
         
     }
@@ -54,6 +54,8 @@ struct LoginScreen: View {
         guard !userNameInput.isEmpty else {
             return
         }
+        // If the user has already chosen a username, navigate them directly to the chat screen, will be using the defaults var in SceneDelegate
+
         let defaults = UserDefaults.standard
         defaults.set(userNameInput, forKey: "username")
         
