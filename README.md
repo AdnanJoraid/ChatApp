@@ -1,5 +1,5 @@
 # ChatApp
-#### An iOS chat application that uses Firebase database to store/retrieve chat messages
+#### An iOS chat application using SwiftUI that uses Firebase database to store/retrieve chat messages
 
 ## Setting up Firebase
    The application won't work since I removed the firebase plist file. If anyone wants to run the app follow this link:
