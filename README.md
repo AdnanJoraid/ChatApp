@@ -5,7 +5,7 @@
    The application won't work since I removed the firebase plist file, If anyone wants to run the app follow this link:
         - https://firebase.google.com/docs/ios/setup
 
-### Screenshots from the application
+## Screenshots from the application
   -Login Screen:
   
   ![Screen Shot 2020-08-18 at 3 01 40 PM](https://user-images.githubusercontent.com/59744727/90555361-3d067000-e165-11ea-82d8-bd283526409e.png)
