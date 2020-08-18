@@ -9,7 +9,10 @@
 import Foundation
 import SwiftUI
 
+// This class will be holding information about each message such as the content, the sender and if the message is sent by the users themselves.
+
 class ChatMessage {
+    
     let messageText : String
     let userName : String
     let isMe : Bool

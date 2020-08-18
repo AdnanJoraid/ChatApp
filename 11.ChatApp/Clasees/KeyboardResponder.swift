@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 
+// preventing the keyboard from hiding the chat/login textfield views by moving the view up/down depending on the currentHeight
 
 class KeyboardResponder: ObservableObject {
     

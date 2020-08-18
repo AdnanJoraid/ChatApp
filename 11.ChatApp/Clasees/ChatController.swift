@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 import Combine
 
+// This class will handle the retrieving/sending messages from/to the Database
+
 class ChatController : ObservableObject {
     var messages = [ChatMessage]()
     

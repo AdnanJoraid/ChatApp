@@ -9,6 +9,9 @@
 import Foundation
 import Firebase
 
+// for accessing the root and the chat node of the firebase
+
 let databaseRoot = Database.database().reference()
 
+//creates a child out of the root.
 let databaseChats = databaseRoot.child("chats")
