@@ -26,7 +26,7 @@ class ChatController : ObservableObject {
     func receiveMessages() {
         
         
-        let query = databaseChats.queryLimited(toLast: 5)
+        let query = databaseChats.queryLimited(toLast: 2)
         
         _ = query.observe(.childAdded, with: { [weak self] snapshot in
             

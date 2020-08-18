@@ -134,6 +134,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		905F4A5724EC5E1D004C9A54 /* Clasees */ = {
+			isa = PBXGroup;
+			children = (
+				9088705224CBBB2800E50756 /* SceneDelegate.swift */,
+				9088705024CBBB2800E50756 /* AppDelegate.swift */,
+				90D35A6424D6736E007C82FA /* KeyboardResponder.swift */,
+				90E7DED724D73196005D418F /* ChatController.swift */,
+				90E7DED524D730C6005D418F /* DatabaseConstants.swift */,
+				906E572C24D49839008C0081 /* ChatMessage.swift */,
+			);
+			path = Clasees;
+			sourceTree = "<group>";
+		};
+		905F4A5924EC5E5C004C9A54 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9088708324CC690800E50756 /* LoginScreen.swift */,
+				9088708524CC691800E50756 /* ChatScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		905F4A5A24EC5EA2004C9A54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90BE598824D659AD00087B1E /* ChatRow.swift */,
+				9088708724CC692000E50756 /* View Router */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9088704424CBBB2800E50756 = {
 			isa = PBXGroup;
 			children = (
@@ -159,17 +190,10 @@
 		9088704F24CBBB2800E50756 /* 11.ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				9088705024CBBB2800E50756 /* AppDelegate.swift */,
-				906E572C24D49839008C0081 /* ChatMessage.swift */,
-				90BE598824D659AD00087B1E /* ChatRow.swift */,
-				90E7DED524D730C6005D418F /* DatabaseConstants.swift */,
-				90E7DED724D73196005D418F /* ChatController.swift */,
-				9088705224CBBB2800E50756 /* SceneDelegate.swift */,
-				90D35A6424D6736E007C82FA /* KeyboardResponder.swift */,
+				905F4A5A24EC5EA2004C9A54 /* Views */,
+				905F4A5924EC5E5C004C9A54 /* Screens */,
+				905F4A5724EC5E1D004C9A54 /* Clasees */,
 				90E7DED324D72DA7005D418F /* GoogleService-Info.plist */,
-				9088708724CC692000E50756 /* View Router */,
-				9088708524CC691800E50756 /* ChatScreen.swift */,
-				9088708324CC690800E50756 /* LoginScreen.swift */,
 				9088705924CBBB2C00E50756 /* Assets.xcassets */,
 				9088705E24CBBB2C00E50756 /* LaunchScreen.storyboard */,
 				9088706124CBBB2C00E50756 /* Info.plist */,

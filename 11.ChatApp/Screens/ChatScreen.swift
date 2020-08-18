@@ -22,7 +22,8 @@ struct ChatScreen: View {
                     
                     }
                     
-                }
+                }.listStyle(PlainListStyle())
+                    .offset(y: -keyboardResponder.currentHeight)
                     
                 //}
                 Spacer()
@@ -35,7 +36,7 @@ struct ChatScreen: View {
                         .padding()
                     
                     HStack {
-                        TextField("New message...", text: $newMessageInput, onCommit: {
+                        TextField("Write a message...", text: $newMessageInput, onCommit: {
                             guard !self.newMessageInput.isEmpty else {
                                 print("message is empty")
                                 return
@@ -65,10 +66,11 @@ struct ChatScreen: View {
                 .frame(height:70)
                 .offset(y: -keyboardResponder.currentHeight)
                 
-            }.navigationBarTitle("ChatApp")
+            }.navigationBarTitle("ChatApp", displayMode: .inline)
             .onAppear(perform: {
                 self.chatController.receiveMessages()
             })
+            
            
             
         }

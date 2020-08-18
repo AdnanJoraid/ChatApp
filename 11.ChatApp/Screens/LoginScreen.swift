@@ -12,15 +12,15 @@ let lightGrayColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255
 
 struct LoginScreen: View {
     @State private var userNameInput : String = ""
-    
+    @ObservedObject var keyboardResponder = KeyboardResponder()
     @EnvironmentObject var viewRouter : ViewRouter
     
     var body: some View {
         VStack {
             Text("Login")
                 .font(.title)
-                .padding(.top, 100)
-                .padding(.bottom, 170)
+                .padding(.top, 150)
+                .padding(.bottom, 200)
                 .foregroundColor(.blue)
             
             Text("Please enter your nickname")
@@ -46,7 +46,8 @@ struct LoginScreen: View {
             Spacer()
             
             
-        }
+        }.offset(y: -keyboardResponder.currentHeight/2.5)
+        
     }
     
     func signIn(){
